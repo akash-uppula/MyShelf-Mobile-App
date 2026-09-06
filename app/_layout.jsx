@@ -1,6 +1,9 @@
+import "react-native-gesture-handler";
+
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { useColorScheme } from "react-native";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 import AuthProvider from "../context/AuthContext";
 import BookProvider from "../context/BookContext";
@@ -11,17 +14,19 @@ const Layout = () => {
   const isDark = colorScheme === "dark";
 
   return (
-    <AuthProvider>
-      <BookProvider>
-        <StatusBar style={isDark ? "light" : "dark"} />
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <AuthProvider>
+        <BookProvider>
+          <StatusBar style={isDark ? "light" : "dark"} />
 
-        <Stack
-          screenOptions={{
-            headerShown: false,
-          }}
-        />
-      </BookProvider>
-    </AuthProvider>
+          <Stack
+            screenOptions={{
+              headerShown: false,
+            }}
+          />
+        </BookProvider>
+      </AuthProvider>
+    </GestureHandlerRootView>
   );
 };
 

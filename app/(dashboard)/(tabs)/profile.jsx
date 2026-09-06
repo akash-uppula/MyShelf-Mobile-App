@@ -131,7 +131,6 @@ const styles = StyleSheet.create({
 
   profileHeader: {
     alignItems: "center",
-    marginTop: 30,
     marginBottom: 35,
   },
 
