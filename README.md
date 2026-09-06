@@ -80,10 +80,6 @@ MyShelf-Mobile-App/
 └── README.md
 ```
 
-### Project structure screenshot
-
-![MyShelf Project Structure](assets/img/project-structure.png)
-
 ---
 
 ## 🧭 Navigation
